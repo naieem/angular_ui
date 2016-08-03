@@ -1,0 +1,13 @@
+<div>
+    <h2>{{name}}</h2>
+    <form name="add_item">
+        <input type="text" ng-model="item" name="item" required>{{item}}
+        <span ng-show="add_item.item.$touched && add_item.item.$invalid">The name is required.</span><br>
+        <input type="submit" value="add" ng-click="add()">
+    </form>
+    <ul>
+        <li ng-repeat="x in items track by $index">
+            {{ x }}
+        </li>
+    </ul>
+</div>
